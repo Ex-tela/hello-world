@@ -1,9 +1,9 @@
 def greeter(hi_amount):
     try:
-        response = 'Hi ' * int(hi_amount)
+        return 'Hi! ' * int(hi_amount)
     except ValueError:
-        response = 'This is not an usable integer. Try again.'
-    return response
+        user_hi_amount = input('That\'s not a choice. Please try again and insert number here: ')
+        return greeter(user_hi_amount)
 
 def truth_teller(truth_choice):
     lower_choice = truth_choice.lower()
@@ -12,7 +12,8 @@ def truth_teller(truth_choice):
     elif lower_choice == 'no':
         return 'Ok, then. Bye!'
     else:
-        return 'Your answer was supposed to equal \'yes\' or \'no\'. Try again.'
+        user_truth_choice = input('That\'s not a choice. Please try again and answer \'yes\' or \'no\': ')
+        return truth_teller(user_truth_choice)
     
 def main():
    print('Hello World!')
