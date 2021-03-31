@@ -6,7 +6,7 @@ def greeter(hi_amount):
     return response
 
 def main():
-   print('Hello World!')
+   print('Hello cruel World!')
    user_hi_amount = input('insert number here: ')
    print(greeter(user_hi_amount))
 
