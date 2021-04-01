@@ -16,7 +16,7 @@ def truth_teller(truth_choice):
         return truth_teller(user_truth_choice)
     
 def main():
-   print('Hello World!')
+   print('Hello cruel World!')
    user_hi_amount = input('Insert number here: ')
    print(greeter(user_hi_amount))
    user_truth_choice = input('Would you like to hear the truth about programming? Please answer \'yes\' or \'no\': ')
