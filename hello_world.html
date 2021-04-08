@@ -12,7 +12,7 @@
     <title>This is just a test.</title>
   </head>
   <body>
-    <header class="p-2 text-white" style="background-color: rgb(50, 10, 87)">
+    <header class="p-3 text-white" style="background-color: rgb(50, 10, 87)">
       <div class="container-fluid">
         <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-center">
           <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
@@ -35,15 +35,27 @@
         </div>
       </div>
     </header>
-    <div class="h-5000 d-inline-block p-3 mr-1" style="width: 50%; background-color: rgba(255, 255, 255, 0.1)">
-      <input type="text" class="form-control" placeholder="Insert here Chords" aria-label="Insert here Chords" aria-describedby="basic-addon2">
-      <div>
-        <span class="p-1"></span>
-      </div>
-      <div class="input-group-append">
-        <button class="btn btn-outline-secondary" type="button">Upload File</button>
-        <span class="p-1"></span>
-        <button class="btn btn-outline-secondary" type="button">Magic</button>
+    
+    <div class="h-5000 d-inline-block p-3 mr-1" style="width: 100%; background-color: rgba(255, 255, 255, 0)">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm" id="song_output">
+            Your song will appear here!
+          </div>
+          <div class="col-sm">
+            <div class="form-group">
+              <textarea class="form-control"  placeholder="Insert chords here..." rows="18" id="song_input"></textarea>
+            </div>
+            <div>
+              <span class="me-1"></span>
+            </div>
+            <div class="input-group-append">
+              <button type="button" class="btn btn-warning"
+              onclick="document.getElementById('song_output').innerHTML=document.getElementById('song_input').value"
+              >Magic</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
