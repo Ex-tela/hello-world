@@ -5,7 +5,7 @@ app.config["DEBUG"] = True
 
 @app.route('/format_chordpro/', methods=['GET'])
 def home():
-    return "<h1>Good Morning, weirdo!</h1><p>You were fooled by yourself! =D =,C                  inferno</p>"
+    return "<h1>palavra</h1><p>palavras</p>"
 
 app.run()
 
