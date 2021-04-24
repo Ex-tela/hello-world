@@ -29,8 +29,10 @@
           }
       };
 
-      xmlhttp.open("GET", "http://127.0.0.1:5000/format_chordpro/", true);
-      xmlhttp.send();
+      xmlhttp.setRequestHeader("Content-Type", "text/plain")
+      xmlhttp.open("POST", "http://127.0.0.1:5000/format_chordpro/", true);
+      var inputHtml  = document.getElementById('song_input').value;
+      xmlhttp.send(inputHtml);
       // document.getElementById('song_output').innerHTML=document.getElementById('song_input').value;
     }
     </script>
