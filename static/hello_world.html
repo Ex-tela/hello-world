@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+  
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -20,20 +21,17 @@
             if (xmlhttp.status == 200) {
                 document.getElementById("song_output").innerHTML = xmlhttp.responseText;
             }
-            else if (xmlhttp.status == 400) {
-                alert('dcfghnm');
-            }
             else {
-                alert('zxcvbnm, ' + xmlhttp.status);
+                alert('Error, ' + xmlhttp.status);
             }
           }
       };
 
       xmlhttp.setRequestHeader("Content-Type", "text/plain")
       xmlhttp.open("POST", "http://127.0.0.1:5000/format_chordpro/", true);
-      var inputHtml  = document.getElementById('song_input').value;
+      var inputHtml = document.getElementById('song_input').value;
       xmlhttp.send(inputHtml);
-      // document.getElementById('song_output').innerHTML=document.getElementById('song_input').value;
+      document.getElementById('song_output').innerHTML=document.getElementById('song_input').value;
     }
     </script>
 
@@ -64,6 +62,7 @@
       </div>
     </header>
     
+
     <div class="h-5000 d-inline-block p-3 mr-1" style="width: 100%; background-color: rgba(255, 255, 255, 0)">
       <div class="container-fluid">
         <div class="row">
