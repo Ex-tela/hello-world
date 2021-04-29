@@ -6,10 +6,10 @@ app = flask.Flask(__name__, static_url_path='/web/')
 app.config["DEBUG"] = True
 
 
-@app.route('/format_chordpro/', methods=['GET'])
+@app.route('/format_chordpro/', methods=['POST'])
 def home():
    chord = request.data.decode()
-   return chord_formatter.format(chord), print('<p>oi</p>')
+   return chord_formatter.format(chord)
 
 
 
