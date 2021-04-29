@@ -12,6 +12,7 @@ def home():
    return chord_formatter.format(chord)
 
 
+
 @app.route('/', methods=['GET'])
 def root():
     return app.send_static_file('hello_world.html')
